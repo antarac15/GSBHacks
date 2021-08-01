@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!-- Template by Quackit.com -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Neighborhood Threads</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<body onload="getLocation()">
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    document.getElementById("Cloth1").innerHTML = "Katy's Dress";
+    document.getElementById("dress").src="/images/kayusbetterdress.jpg";
+     document.getElementById("Cloth description").innerHTML= " Price: $15 Seller: Katy N. <br> Description: Light purple bodycon dress from H&M. Fitting is true to size. Gently worn, good condition.";
+     document.getElementById("Cloth2").innerHTML="Karen's t-shirt";
+     document.getElementById("Cloth2 description").innerHTML="Price: $20 Size: M Seller: Karen T. <br> Description: White t-shirt, Text: 100% Human, Abercrombie & Fitch. Barely worn, close to new condition";
+     document.getElementById("tshirt").src="/images/tshirtkat.jpg";
+     document.getElementById("Cloth3").innerHTML="Sarah's skirt";
+     document.getElementById("skirt").src="/images/shirinskirt.jpg";
+     document.getElementById("Cloth3 description").innerHTML="Price: $5 Size: L Seller: Sarah J. <br> Description: black mini skirt from target, in good condition";
+     document.getElementById("shelters").innerHTML="<a href='http://familysupportivehousing.org/'>Family Support Housing</a> <br> <a href='https://www.lifemoves.org/'>Life Moves San Jose </a> <br> <a href='https://www.homefirstscc.org/'>Home First Services</a>";
+    
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+</script>
+
+
+
+
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Logo and responsive toggle -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <span class="glyphicon glyphicon-globe"></span>
+                NT
+            </a>
+        </div>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#About">About</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Services <span class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="about-us">
+                        <li><a href="#find-clothes">Find Clothes</a></li>
+                        <li><a href="#sell">Sell</a></li>
+                        <li><a href="#donate">Donate</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Search -->
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-default">Search</button>
+            </form>
+
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Logo -->
+<div class="jumbotron feature">
+    <div class="container">
+        <h1><span class="glyphicon glyphicon-globe"></span> Neighborhood Threads</h1>
+        <p>Fostering a community of women using fashion while reducing the environmental impact of the clothing
+            industry.</p>
+    </div>
+</div>
+
+
+<!-- About -->
+<div class="tab-content" id="About">
+    <div class="container">
+        <h1>
+            About Us
+        </h1>
+        <p>
+            We are a group of high school students that care deeply about protecting our environment. From shein to depop, the rise of fast fashion and unsustainable shopping is quickly becoming a problem not only for the environment, but also for women working tirelessly to produce this high demand of clothes in sweatshops. We want to bring sustainable thrifting back to local communities! 
+        </p>
+    </div>
+</div>
+
+
+
+<!-- Buy clothes -->
+<div class="container" id="find-clothes">
+
+    <!-- Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Affordable Clothes Near You
+            </h1>
+            <p>
+                Buy clothes from people in your neighborhood.
+            </p>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Feature Row -->
+    <div class="row">
+        <article class="col-md-4 article-intro">
+            <a href="#">
+                <!-- <img class="img-responsive img-rounded" src="holder.js/700x300" alt="">  -->
+                <img id="dress" src="" alt="Enable location to display avaliable clothes" style="height: 215px; width: 215px">
+            </a>
+            <h3>
+             <!-- //<a href="#">Efficiently Unleash</a> -->
+                <h1 id="Cloth1">Enable Location to find clothes to buy!</h1>
+                
+            </h3>
+            <p id="Cloth description">
+                The price, seller, size, and a short description of the piece will show up here.</p>
+        </article>
+        <article class="col-md-4 article-intro">
+            <a href="#">
+                <img id="tshirt" src="" alt="Enable location to display avaliable clothes" style="height: 215px; width: 215px">
+            </a>
+            <h3>
+                <h1 id="Cloth2">Enable Location to find clothes to buy!</h1>
+            </h3>
+            <p id="Cloth2 description">
+                The price, seller, size, and short description of the clothing will show up here.</p>
+        </article>
+
+        <article class="col-md-4 article-intro">
+            <a href="#">
+                <img id="skirt" src="" alt="Enable location to display avaliable clothes" style="height: 215px; width: 215px">
+            </a>
+            <h3>
+                <h1 id="Cloth3">Enable Location to find clothes to buy!</h1>
+            </h3>
+            <p id="Cloth3 description">
+                The price, seller, size, and short description of the clothing will show up here.</p>
+        </article>
+    </div>
+    <!-- /.row -->
+
+</div>
+
+<!-- Sell -->
+<div class="container" id="sell">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Sell Clothes
+            </h1>
+
+
+            <p> Your name <input type="text"></p>
+            <p> Upload image of item
+            <form action="/action_page.php">
+                <input type="file" id="img" name="img" accept="image/*">
+
+            </form>
+            </p>
+
+            
+            <p> Size <input type="text"></p>
+            <p> Description <input type="text"></p>
+            <p> Local Verfication Code <input type="text"></p>
+            <button onclick="document.getElementById('form').innerHTML='Sale approved!'">Submit</button>
+            <p id="form"></p>
+
+
+
+        </div>
+
+    </div>
+</div>
+
+<!-- Donate -->
+<div class="container" id="donate">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Donate </h1>
+                <h2> Shelters accepting donations near you: </h2>
+                <p id="shelters"></p>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+<!-- Footer -->
+<footer>
+
+    <div class="small-print">
+        <div class="container">
+            <p><a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact</a></p>
+            <p>Copyright &copy; Example.com 2015 </p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- jQuery -->
+<script src="js/jquery-1.11.3.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- IE10 viewport bug workaround -->
+<script src="js/ie10-viewport-bug-workaround.js"></script>
+
+<!-- Placeholder Images -->
+<script src="js/holder.min.js"></script>
+
+</body>
+
+</html>
